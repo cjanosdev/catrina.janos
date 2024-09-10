@@ -1,0 +1,31 @@
+/* HomePage.module.css */
+
+/* Style for the profile picture */
+.profilePic {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  /* Center image within the Avatar component */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Style for social media icons */
+.socialIcon {
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  /* Center icons with padding */
+  margin: 0 10px;
+}
+
+.socialIcon:hover {
+  transform: scale(1.2);
+}
+
+.socialIcon.LinkedIn {
+  color: #0077b5; /* LinkedIn color */
+}
+
+.socialIcon.Email {
+  color: #d44638; /* Email color */
+}
+

@@ -1,11 +1,17 @@
-// gatsby-browser.js
 import React from 'react';
 import { ThemeProvider } from '@mui/material/styles';
+import { CacheProvider } from '@emotion/react';
+import createCache from '@emotion/cache';
 import theme from './src/theme'; // Import your custom theme
 import Layout from './src/components/Layout';
 
+// Create an Emotion cache instance
+const cache = createCache({ key: 'css' });
+
 export const wrapRootElement = ({ element }) => (
-  <ThemeProvider theme={theme}>
-    <Layout>{element}</Layout>
-  </ThemeProvider>
+  <CacheProvider value={cache}>
+    <ThemeProvider theme={theme}>
+      <Layout>{element}</Layout>
+    </ThemeProvider>
+  </CacheProvider>
 );

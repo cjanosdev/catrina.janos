@@ -2,11 +2,13 @@ import React from 'react';
 import { Container, CssBaseline, AppBar, Toolbar, Typography, Button } from '@mui/material';
 import { Link } from 'gatsby';
 import { useTheme } from '@mui/material/styles';
+import GlobalHead from './GlobalHead';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const theme = useTheme(); // Hook to access the theme
   return (
     <div className="layout-container">
+      <GlobalHead />
       <CssBaseline />
       <AppBar position="static" sx={{ backgroundColor: theme.palette.primary.main }}>
         <Toolbar>
